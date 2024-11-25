@@ -11,18 +11,18 @@ An application to track tasks and time effortlessly and efficiently. Perfect for
 
 ## Run Locally
 
-You need to have installed docker.
+**IMPORTANT! You only need to have installed docker and docker compose.**
 
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone git@github.com:anunde/degustabox.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd time-tracker
+  cd degustabox
 ```
 
 Build the containers
@@ -43,7 +43,7 @@ Install composer dependencies
   make prepare
 ```
 
-You can access throught: http://localhost:300
+After this, you can access throught: http://localhost:300
 
 
 ## Tech Stack

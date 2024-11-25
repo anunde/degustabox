@@ -22,11 +22,14 @@ build: ## Rebuilds all the containers
 	U_ID=${UID} docker-compose build
 
 prepare: ## Runs backend commands
-	$(MAKE) composer-install
+	$(MAKE) composer-install && $(MAKE) set-database
 
 # Backend commands
 composer-install: ## Installs composer dependencies
 	U_ID=${UID} docker exec --user ${UID} -it ${DOCKER_BE} composer install --no-scripts --no-interaction --optimize-autoloader
+
+set-database: ## Prepare database
+	U_ID=${UID} docker exec --user ${UID} -it ${DOCKER_BE} php bin/console d:s:u --force --no-scripts --no-interaction --optimize-autoloader
 
 be-logs: ## Tails the Symfony dev log
 	U_ID=${UID} docker exec -it --user ${UID} ${DOCKER_BE} tail -f var/log/dev.log
