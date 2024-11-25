@@ -1,0 +1,5 @@
+controllers:
+    resource:
+        path: ../src/Task/Infrastructure/Controller
+        namespace: App\Task\Infrastructure\Controller
+    type: attribute

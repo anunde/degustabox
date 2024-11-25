@@ -1,0 +1,28 @@
+:root{
+    --color-secondary: #e4eaee;
+}
+
+body {
+    background-color: #f2f6f8;
+}
+
+input {
+    border: none;
+    outline: none;   
+    box-shadow: none;
+}
+
+
+.bg-secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+@media (min-width: 768px) {
+    .border-md-0 {
+        border: none !important;
+    }
+
+    .border-md-start {
+        border-inline-start: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    }
+}
